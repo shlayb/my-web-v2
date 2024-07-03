@@ -1,0 +1,8 @@
+npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch
+
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+Love learning new things and have a strong curiosity. I am a freshman student at Yogyakarta State University with a passion for programming, math, and design. Experienced in making graphic design and photography in various school annual events. 
+This makes me want to continue to study and learn and seek experience in the field of media and information.

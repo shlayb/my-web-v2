@@ -1,0 +1,26 @@
+[
+  {
+    "value": "",
+    "label": "All"
+  },
+  {
+    "value": "Kalkulus",
+    "label": "Kalkulus"
+  },
+  {
+    "value": "Fisika",
+    "label": "Fisika"
+  },
+  {
+    "value": "Kimia",
+    "label": "Kimia"
+  },
+  {
+    "value": "Progdas",
+    "label": "Progdas"
+  },
+  {
+    "value": "UntaianListrik",
+    "label": "Untaian Listrik"
+  }
+]
