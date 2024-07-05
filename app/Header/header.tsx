@@ -45,7 +45,6 @@ function Header() {
 
   return (
     <nav ref={ScrollRef} className="fixed drop-shadow-pas w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       <div className={`mx-auto max-w-6xl px-8 max-lg:mx-auto max-lg:px-4`}>
         <div className="flex">
           <div className="flex w-full justify-between">
@@ -55,6 +54,9 @@ function Header() {
               </a>
             </div>
             <div className={`font-Poppins hidden space-x-1 align-middle text-primary md:flex`}>
+              <div className="px-2 py-[0.85rem] text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+                <ModeToggle />
+              </div>
               <a href="/#Home" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light  hover:text-gray-900">
                 Home
               </a>
@@ -67,12 +69,9 @@ function Header() {
               <Link href="/Notes" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900 ">
                 Notes
               </Link>
-              <div className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
-                <ModeToggle />
-              </div>
             </div>
             <div id="mobile-menu" className="flex items-center dark:text-light md:hidden">
-              <div className='px-3'>
+              <div className="px-3">
                 <ModeToggle />
               </div>
               <button

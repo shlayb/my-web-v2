@@ -9,15 +9,30 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { useEffect, useState } from 'react';
 import { posts } from '#site/content';
 import PropsItem from '@/components/ui/notes-prov';
-import frameworks from '../_meta.json';
+import frameworks from './_meta.json';
 import NotFound from '@/components/ui/notfound';
-import DropDown from '@/components/ui/dropdown';
 import Link from 'next/link';
+import DropDown from '@/components/ui/dropdown';
 Link;
 
-export default function HeroNotes() {
+interface HeroNotesProps {
+  matkul: string;
+}
+
+export default function HeroNotes({ matkul }: HeroNotesProps) {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState('Kimia');
+  const [value, setValue] = useState(matkul || 'All');
+  const [totalpost, settotalpost] = useState(0);
+  useEffect(() => {
+    const displayPosts = posts;
+    let count = 0;
+    displayPosts.forEach((post) => {
+      if (post.matkul === value) {
+        count++;
+      }
+    });
+    settotalpost(count);
+  }, [value]);
   const displayPosts = posts;
 
   return (
@@ -27,8 +42,11 @@ export default function HeroNotes() {
         <DropDown matkul={value} />
       </div>
       <div className="px-10">
-        <hr className="mt-7" />
-        {displayPosts?.length > 0 ? (
+        <Link href={'./'}>
+          <p className="mt-5 text-lg">← back</p>
+        </Link>
+        <hr className="mt-2" />
+        {totalpost > 0 ? (
           <ul className="flex flex-col">
             {displayPosts.map((post) => {
               if (post.matkul === value) {
