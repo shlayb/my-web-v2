@@ -3,9 +3,6 @@ import { build } from 'velite';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // othor next config here...
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
