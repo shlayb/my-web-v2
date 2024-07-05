@@ -1,13 +1,10 @@
 'use client';
 import { use, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { DropdownMenuCheckboxItemProps, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
-import { Moon, Sun } from 'lucide-react';
-import { s } from 'velite';
 
 export default function ModeToggle() {
-  const [Darkmode, setDark] = useState(localStorage.getItem('theme') === 'dark');
+  const defaultTheme = localStorage.getItem('theme');
+  const [Darkmode, setDark] = useState(defaultTheme === 'dark' ? true : false);
 
   useEffect(() => {
     if (Darkmode) {
@@ -19,14 +16,6 @@ export default function ModeToggle() {
     }
   }, [Darkmode]);
 
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      setDark(true);
-    } else {
-      setDark(false);
-    }
-  }, []);
   return (
     <>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
