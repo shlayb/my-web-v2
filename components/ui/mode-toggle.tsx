@@ -28,8 +28,8 @@ export default function ModeToggle() {
   return (
     <>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-      <Button
-        className="w-8 h-8 items-center text-xl bg-transparent hover:bg-transparent text-dark dark:text-light"
+      <button
+        className=" items-center text-xl bg-transparent hover:bg-transparent text-dark dark:text-light"
         onClick={() => {
           setDark(!Darkmode);
         }}
@@ -39,7 +39,7 @@ export default function ModeToggle() {
         ) : (
           <i className="w-[80%] h-[80%] opacity-0  fa-regular fa-lightbulb scale-0 transition-all  dark:scale-100 dark:opacity-100"></i>
         )}
-      </Button>
+      </button>
     </>
   );
 }

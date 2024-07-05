@@ -54,7 +54,7 @@ function Header() {
               </a>
             </div>
             <div className={`font-Poppins hidden space-x-1 align-middle text-primary md:flex`}>
-              <div className="px-2 py-[0.85rem] text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+              <div className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
                 <ModeToggle />
               </div>
               <a href="/#Home" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light  hover:text-gray-900">
