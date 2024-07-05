@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-light text-foreground;
+    @apply bg-light text-foreground dark:bg-dark;
   }
 }
 
