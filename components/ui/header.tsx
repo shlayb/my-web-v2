@@ -45,7 +45,6 @@ function Header() {
 
   return (
     <nav ref={ScrollRef} className="fixed drop-shadow-pas w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
       <div className={`mx-auto max-w-6xl px-8 max-lg:mx-auto max-lg:px-4`}>
         <div className="flex">
           <div className="flex w-full justify-between">

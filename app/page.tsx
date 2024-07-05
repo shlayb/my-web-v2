@@ -1,13 +1,8 @@
-import Image from 'next/image';
-import Header from './Header/header';
-import BodyPage from './webpage/body';
-import TechStack from './webpage/tech';
-import ContactFooter from './webpage/contact';
+import Header from '../components/ui/header';
+import BodyPage from '../components/ui/body';
+import TechStack from '../components/ui/tech';
+import ContactFooter from '../components/ui/contact';
 import { Poppins } from 'next/font/google';
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
 
 const poppins = Poppins({
   subsets: ['latin'],

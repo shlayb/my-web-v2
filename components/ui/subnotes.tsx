@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google';
 import Header from '@/components/ui/header';
-import HeroNotes from './herosub';
+import HeroNotes from '../../app/Notes/herosub';
 import { posts } from '#site/content';
 import PropsItem from '@/components/ui/notes-prov';
 import Footer from '@/components/ui/footer';

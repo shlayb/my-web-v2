@@ -38,10 +38,10 @@ export default function HeroNotes({ matkul }: HeroNotesProps) {
   return (
     <section className="w-[96%] h-full mx-auto my-0 font-Poppins">
       <div className="w-full max-h-20 flex justify-between items-stretch px-5 border-0">
-        <h1 className="text-5xl font-semibold text-dark dark:text-light">Lecture Notes</h1>
+        <h1 className="text-5xl font-semibold text-dark max-lg:text-3xl dark:text-light">Lecture Notes</h1>
         <DropDown matkul={value} />
       </div>
-      <div className="px-10">
+      <div className="px-5">
         <Link href={'./'}>
           <p className="mt-5 text-lg">← back</p>
         </Link>

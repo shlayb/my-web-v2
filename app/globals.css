@@ -98,5 +98,5 @@
 }
 
 .bodynotes {
-  @apply max-w-[80%] min-h-lvh py-8 mx-auto;
+  @apply max-w-[80%] min-h-lvh py-8 mx-auto max-lg:max-w-[90%] max-lg:py-4;
 }

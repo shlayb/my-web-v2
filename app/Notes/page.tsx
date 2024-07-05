@@ -1,5 +1,5 @@
 import { Poppins } from 'next/font/google';
-import Header from '../Header/header';
+import Header from '../../components/ui/header';
 import HeroNotes from './hero';
 import { posts } from '#site/content';
 import PropsItem from '@/components/ui/notes-prov';

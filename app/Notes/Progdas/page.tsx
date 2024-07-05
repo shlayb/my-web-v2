@@ -1,4 +1,4 @@
-import SubNotes from '../subnotes';
+import SubNotes from '../../../components/ui/subnotes';
 
 export default function Progdas() {
   const value = 'Progdas';
