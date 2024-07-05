@@ -44,7 +44,7 @@ function Header() {
   }, []);
 
   return (
-    <nav ref={ScrollRef} className="fixed drop-shadow-pas w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
+    <nav ref={ScrollRef} className="fixed z-[9999] drop-shadow-pas w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
       <div className={`mx-auto max-w-6xl px-8 max-lg:mx-auto max-lg:px-4`}>
         <div className="flex">
           <div className="flex w-full justify-between">
