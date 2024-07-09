@@ -39,20 +39,20 @@ export default async function PostPage({ params }: PostPageProps) {
     <div className={poppins.className}>
       <Header />
       <div className="w-full h-20 bg-light dark:bg-dark"></div>
-      <article className="container py-6 prose dark:prose-invert max-w-[75%] mx-auto">
+      <article className="py-6 px-8 prose dark:prose-invert max-w-[75%] mx-lg:min-w-[85%] mx-lg:px-2 mx-auto">
         <BreadcrumbNotes matkul={post.matkul} title={slug} />
-        <h1 className="text-4xl font-semibold py-2">{post.title}</h1>
-        <h3 className="text-xl font-medium py-1 text-muted-foreground">Mata Kuliah : {post.matkul}</h3>
-        <div className="flex justify-between items-center py-1">
-          <dl>
+        <h2 className="text-4xl font-semibold my-2">{post.title}</h2>
+        <h3 className="text-xl font-medium text-muted-foreground my-1">Mata Kuliah : {post.matkul}</h3>
+        <div className="flex justify-normal items-center">
+          <dl className="my-0 ">
             <dt className="sr-only">Oploaded On</dt>
-            <dd className="text-sm md:text-base font-semibold flex items-center gap-1">
-              <Calendar className="h-4 w-4" />
+            <dd className="text-sm md:text-base font-semibold flex items-center gap-2 px-0">
+              <Calendar className="h-5 w-5" />
               <time dateTime={post.date}>{FormatDate(post.date)}</time>
             </dd>
           </dl>
         </div>
-        <hr className="my-3" />
+        <hr className="my-5" />
         <MdxComponent code={post.body} />
       </article>
     </div>

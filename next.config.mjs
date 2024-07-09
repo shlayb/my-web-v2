@@ -14,8 +14,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
-
 class VeliteWebpackPlugin {
   static started = false;
   apply(/** @type {import('webpack').Compiler} */ compiler) {
@@ -29,3 +27,4 @@ class VeliteWebpackPlugin {
     });
   }
 }
+export default nextConfig;

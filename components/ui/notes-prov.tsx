@@ -30,7 +30,7 @@ export default function PropsItem({ slug, title, description, date, matkul }: Pr
             <time dateTime={date}>{FormatDate(date)}</time>
           </dd>
         </dl>
-        <Link href={slug} className={cn(buttonVariants({ variant: 'link' }), 'py-0')}>
+        <Link href={'/Notes/' + matkul + '/' + filename} className={cn(buttonVariants({ variant: 'link' }), 'py-0 text-muted-foreground decoration-muted')}>
           Read More ➜
         </Link>
       </div>

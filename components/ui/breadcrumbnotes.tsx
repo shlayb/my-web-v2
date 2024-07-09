@@ -3,8 +3,7 @@ import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-poppins',
+  weight: ['400', '700'],
 });
 
 interface BreadcrumbNotesProps {
@@ -17,16 +16,16 @@ export function BreadcrumbNotes({ matkul, title }: BreadcrumbNotesProps) {
     <>
       <div className={(poppins.className, 'flex gap-3 py-2')}>
         <Link href="/Notes">
-          <span>Notes</span>
+          <span className="font-bold ">Notes</span>
         </Link>
         <span>
-          <i className="fa-solid fa-greater-than scale-90"></i>
+          <i className="fa-regular fa-greater-than scale-[75%]"></i>
         </span>
         <Link href={`/Notes/${matkul}`}>
-          <span>{matkul}</span>
+          <span className="font-semibold">{matkul}</span>
         </Link>
         <span>
-          <i className="fa-solid fa-greater-than scale-90"></i>
+          <i className="fa-regular fa-greater-than scale-[75%]"></i>
         </span>
         <span className="font-medium">{title}</span>
       </div>
