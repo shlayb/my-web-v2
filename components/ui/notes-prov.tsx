@@ -12,11 +12,12 @@ interface PropsItemProps {
 }
 
 export default function PropsItem({ slug, title, description, date, matkul }: PropsItemProps) {
+  const filename = slug.replace('Notes/', '');
   return (
     <article className="flex flex-col items-start gap-2 border-border border-b py-3">
       <div>
         <h2 className="text-2xl font-semibold ">
-          <Link href={slug}>{title}</Link>
+          <Link href={'/Notes/' + matkul + '/' + filename}>{title}</Link>
         </h2>
         <p className="text-sm text-muted-foreground">{matkul}</p>
       </div>
