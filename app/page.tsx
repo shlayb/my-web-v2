@@ -11,20 +11,18 @@ const poppins = Poppins({
 
 export default function Home(): JSX.Element {
   return (
-    <html className="scroll-smooth">
-      <body className={poppins.className}>
-        <Header />
-        <div className="w-full h-20 bg-light dark:bg-dark"></div>
-        <div id="Home">
-          <BodyPage />
-        </div>
-        <div id="Tech">
-          <TechStack />
-        </div>
-        <div id="contact">
-          <ContactFooter />
-        </div>
-      </body>
-    </html>
+    <div className={poppins.className}>
+      <Header />
+      <div className="w-full h-20 bg-light dark:bg-dark"></div>
+      <div id="Home">
+        <BodyPage />
+      </div>
+      <div id="Tech">
+        <TechStack />
+      </div>
+      <div id="contact">
+        <ContactFooter />
+      </div>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import { use, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 
 export default function ModeToggle() {
-  const [Darkmode, setDark] = useState(false);
+  const [Darkmode, setDark] = useState(true);
 
   useEffect(() => {
     const defaultTheme = localStorage.getItem('theme');

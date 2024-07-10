@@ -6,9 +6,10 @@ import { BreadcrumbNotes } from '@/components/ui/breadcrumbnotes';
 import { Calendar } from 'lucide-react';
 import { cn, FormatDate } from '@/lib/utils';
 import { MdxComponent } from '@/components/ui/mdx-component';
+import NotFound from '@/components/ui/notfound';
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 interface PostPageProps {
@@ -31,7 +32,13 @@ export async function generateStaticParams(): Promise<PostPageProps['params'][]>
 export default async function PostPage({ params }: PostPageProps) {
   const post = await getPostFromParams(params);
   if (!post || !post.published) {
-    return notFound();
+    return (
+      <>
+        <Header />
+        <div className="w-full h-20 bg-light dark:bg-dark"></div>
+        <NotFound />
+      </>
+    );
   }
   const slug = params.slug.join('/');
 
@@ -39,7 +46,7 @@ export default async function PostPage({ params }: PostPageProps) {
     <div className={poppins.className}>
       <Header />
       <div className="w-full h-20 bg-light dark:bg-dark"></div>
-      <article className="py-6 px-8 prose dark:prose-invert max-w-[75%] mx-lg:min-w-[85%] mx-lg:px-2 mx-auto">
+      <article className="py-6 px-8 prose dark:prose-invert max-w-[75%] max-lg:w-[100%] max-lg:px-2 mx-auto max-lg:mx-8">
         <BreadcrumbNotes matkul={post.matkul} title={slug} />
         <h2 className="text-4xl font-semibold my-2">{post.title}</h2>
         <h3 className="text-xl font-medium text-muted-foreground my-1">Mata Kuliah : {post.matkul}</h3>

@@ -11,3 +11,22 @@ published: true
 ### 1.1. Apa itu Progdas?
 
 Progdas adalah singkatan dari Pemrograman Dasar. Pemrograman Dasar adalah mata kuliah yang mempelajari dasar-dasar pemrograman.
+
+> jadi ini blockquote
+
+Some _asterisks_ for emphasis.
+
+```js {4} showLineNumbers
+import { useFloating } from '@floating-ui/react';
+
+function MyComponent() {
+  const { refs, floatingStyles } = useFloating();
+
+  return (
+    <>
+      <div ref={refs.setReference} />
+      <div ref={refs.setFloating} style={floatingStyles} />
+    </>
+  );
+}
+```

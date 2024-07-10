@@ -2,7 +2,7 @@
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import { use, useEffect, useRef, useState } from 'react';
-import { ThemeProvider } from 'next-theme';
+import { useTheme } from 'next-themes';
 import ModeToggle from '@/components/ui/mode-toggle';
 
 const poppins = Poppins({
@@ -25,48 +25,30 @@ function Header() {
     }
   }, [Mobilenav]);
 
-  const ScrollRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const scrollRefCurrent = ScrollRef.current;
-    return () => {
-      window.onscroll = function () {
-        if (scrollRefCurrent !== null) {
-          const fixednav = scrollRefCurrent.offsetTop;
-
-          if (window.pageYOffset > fixednav) {
-            scrollRefCurrent.classList.add('navbar-fixed');
-          } else {
-            scrollRefCurrent.classList.remove('navbar-fixed');
-          }
-        }
-      };
-    };
-  }, []);
-
   return (
-    <nav ref={ScrollRef} className="fixed z-[9999] drop-shadow-pas w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
+    <nav className="fixed z-[9999] border-b-slate-400 border-b w-full bg-gray-100 font-Poppins dark:bg-dark dark:border-b dark:border-border dark:border-b-slate-600">
       <div className={`mx-auto max-w-6xl px-8 max-lg:mx-auto max-lg:px-4`}>
         <div className="flex">
           <div className="flex w-full justify-between">
             <div className="max-lg:item-start max-lg:mx-0">
-              <a href="/" className="flex items-center px-2 py-5">
+              <a href="/" className="flex items-center px-2 py-4">
                 <span className={` ${poppins.className} poppins text-2xl font-bold text-primary dark:text-light`}>shlayb.</span>
               </a>
             </div>
             <div className={`font-Poppins hidden space-x-1 align-middle text-primary md:flex`}>
-              <div className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+              <div className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
                 <ModeToggle />
               </div>
-              <a href="/#Home" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light  hover:text-gray-900">
+              <a href="/#Home" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light  hover:text-gray-900">
                 Home
               </a>
-              <a href="/#stack" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+              <a href="/#stack" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
                 Tech
               </a>
-              <a href="/#contact" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+              <a href="/#contact" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
                 Contact
               </a>
-              <Link href="/Notes" className="px-2 py-5 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900 ">
+              <Link href="/Notes" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900 ">
                 Notes
               </Link>
             </div>
