@@ -44,8 +44,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div className={poppins.className}>
-      <Header />
-      <div className="w-full h-20 bg-light dark:bg-dark"></div>
       <article className="py-6 px-8 prose dark:prose-invert max-w-[75%] max-lg:w-[100%] max-lg:px-2 mx-auto max-lg:mx-8">
         <BreadcrumbNotes matkul={post.matkul} title={slug} />
         <h2 className="text-4xl font-semibold my-2">{post.title}</h2>

@@ -1,4 +1,3 @@
-import Header from '../components/ui/header';
 import BodyPage from '../components/ui/body';
 import TechStack from '../components/ui/tech';
 import ContactFooter from '../components/ui/contact';
@@ -12,8 +11,6 @@ const poppins = Poppins({
 export default function Home(): JSX.Element {
   return (
     <div className={poppins.className}>
-      <Header />
-      <div className="w-full h-20 bg-light dark:bg-dark"></div>
       <div id="Home">
         <BodyPage />
       </div>
