@@ -16,15 +16,11 @@ const poppins = Poppins({
 
 export default function SubNotes({ value }: RootLayoutProps): JSX.Element {
   return (
-    <html>
-      <body>
-        <Header />
-        <div className="bodynotes">
-          <div className="w-full h-20"></div>
-          <HeroNotes matkul={value} />
-        </div>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <div className="bodynotes">
+        <HeroNotes matkul={value} />
+      </div>
+      <Footer />
+    </>
   );
 }

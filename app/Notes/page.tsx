@@ -20,15 +20,11 @@ export default function MyFunction(): JSX.Element {
   // akses variable value pada hero.tsx
 
   return (
-    <html>
-      <body>
-        <Header />
-        <div className="bodynotes">
-          <div className="w-full h-20"></div>
-          <HeroNotes />
-        </div>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <div className="bodynotes">
+        <HeroNotes />
+      </div>
+      <Footer />
+    </>
   );
 }
