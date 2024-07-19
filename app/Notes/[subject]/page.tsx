@@ -6,26 +6,34 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-interface PostPageProps {
+interface Subject {
+  value: string;
+}
+
+interface SubNotesProps {
   params: {
-    slug: string[];
+    subject: string;
   };
 }
 
-async function getPostFromParams(params: PostPageProps['params']) {
-  const slug = params?.slug?.join('/');
-  const post = Subjects.find((post) => post.value === slug);
-
-  return post;
+async function getSubNotesFromParams(params: SubNotesProps['params']) {
+  const subject = params?.subject;
+  const subnotes = (Subjects as Subject[]).find((subnote) => subnote.value.split('/')[0] === subject);
+  return subnotes;
 }
 
-async function generateStaticParams(): Promise<PostPageProps['params'][]> {
-  return Subjects.map((post) => ({ slug: post.value.split('/') }));
+export async function generateStaticPaths() {
+  const paths = (Subjects as Subject[]).map((subject) => ({
+    params: { subject: subject.value.split('/')[0] },
+  }));
+  return {
+    paths,
+    fallback: false, // or true/false depending on your use case
+  };
 }
 
-export default async function SlugPage({ params }: PostPageProps) {
-  await generateStaticParams();
-  const value = await getPostFromParams(params);
+export default async function SlugPage({ params }: SubNotesProps) {
+  const value = await getSubNotesFromParams(params);
   return (
     <>
       <SubNotes value={value?.value || ''} />

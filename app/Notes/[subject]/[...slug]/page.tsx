@@ -7,7 +7,6 @@ import { Calendar } from 'lucide-react';
 import { cn, FormatDate } from '@/lib/utils';
 import { MdxComponent } from '@/components/ui/mdx-component';
 import NotFound from '@/components/ui/notfound';
-import { s } from 'velite';
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
@@ -26,12 +25,11 @@ async function getPostFromParams(params: PostPageProps['params']) {
   return post;
 }
 
-async function generateStaticParams(): Promise<PostPageProps['params'][]> {
+export async function generateStaticParams(): Promise<PostPageProps['params'][]> {
   return posts.map((post) => ({ slug: post.slugAsParams.split('/') }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  await generateStaticParams();
   const post = await getPostFromParams(params);
   if (!post || !post.published) {
     return (
