@@ -24,7 +24,8 @@ async function generateStaticParams(): Promise<PostPageProps['params'][]> {
 }
 
 export default async function SlugPage({ params }: PostPageProps) {
-  generateStaticParams();
+  const staticParams = await generateStaticParams(); // Call generateStaticParams() and store the return value
+  staticParams; // [{ slug: ['subject'] }, { slug: ['subject'] }, ...]
   const value = await getPostFromParams(params);
   return (
     <>
