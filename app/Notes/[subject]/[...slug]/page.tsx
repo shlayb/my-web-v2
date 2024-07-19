@@ -29,8 +29,15 @@ async function generateStaticParams(): Promise<PostPageProps['params'][]> {
   return posts.map((post) => ({ slug: post.slugAsParams.split('/') }));
 }
 
+export async function getStaticPaths() {
+  const paths = await generateStaticParams();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
 export default async function PostPage({ params }: PostPageProps) {
-  generateStaticParams();
   const post = await getPostFromParams(params);
   if (!post || !post.published) {
     return (
