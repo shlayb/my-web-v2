@@ -2,7 +2,6 @@
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import { use, useEffect, useRef, useState } from 'react';
-import { useTheme } from 'next-themes';
 import ModeToggle from '@/components/ui/mode-toggle';
 
 const poppins = Poppins({
@@ -63,7 +62,7 @@ function Header() {
                     setMobileNav(!Mobilenav);
                   }}
                 >
-                  <svg className="h-7 w-7 text-gray-80" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-7 w-7 text-gray-80" x-show="!showMenu" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                   </svg>
                 </button>

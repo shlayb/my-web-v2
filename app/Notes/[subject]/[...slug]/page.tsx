@@ -26,9 +26,7 @@ async function getPostFromParams(params: PostPageProps['params']) {
 }
 
 export async function generateStaticParams(): Promise<PostPageProps['params'][]> {
-  return posts.map((post) => {
-    return { slug: post.slugAsParams.split('/') };
-  });
+  return posts.map((post) => ({ slug: post.slugAsParams.split('/') }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
@@ -46,12 +44,6 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <div className={poppins.className}>
-      <h1>{JSON.stringify(params)}</h1>
-      <h1>
-        {posts.map((post) => (
-          <span key={post.slugAsParams}>{post.slugAsParams}</span>
-        ))}
-      </h1>
       <article className="py-6 px-8 prose dark:prose-invert max-w-[75%] max-lg:w-[100%] max-lg:px-2 mx-auto max-lg:mx-8">
         <BreadcrumbNotes matkul={post.matkul} title={slug} />
         <h2 className="text-4xl font-semibold my-2">{post.title}</h2>
