@@ -18,19 +18,9 @@ interface SubNotesProps {
 
 async function getSubNotesFromParams(params: SubNotesProps['params']) {
   const subject = params?.subject;
-  const subnotes = (Subjects as Subject[]).find((subnote) => subnote.value.split('/')[0] === subject);
+  const subnotes = Subjects.find((subnote) => subnote.value.split('/')[0] === subject);
   return subnotes;
 }
-
-// export async function generateStaticPaths() {
-//   const paths = (Subjects as Subject[]).map((subject) => ({
-//     params: { subject: subject.value.split('/')[0] },
-//   }));
-//   return {
-//     paths,
-//     fallback: false, // or true/false depending on your use case
-//   };
-// }
 
 export default async function SlugPage({ params }: SubNotesProps) {
   const value = await getSubNotesFromParams(params);
