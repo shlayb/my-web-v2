@@ -6,10 +6,6 @@ const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-interface Subject {
-  value: string;
-}
-
 interface SubNotesProps {
   params: {
     subject: string;
