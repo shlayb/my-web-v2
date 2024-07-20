@@ -22,5 +22,45 @@
   {
     "value": "UntaianListrik",
     "label": "Untaian Listrik"
+  },
+  {
+    "value": "ElektronikaInstrumentasi",
+    "label": "Elektronika Instrumentasi"
+  },
+  {
+    "value": "Matematika",
+    "label": "Matematika"
+  },
+  {
+    "value": "SistemDigital",
+    "label": "Sistem Digital"
+  },
+  {
+    "value": "ElektronikaDasar",
+    "label": "Elektronika Dasar"
+  },
+  {
+    "value": "PemrogramanMikrokontroler",
+    "label": "Pemrograman Mikrokontroler"
+  },
+  {
+    "value": "KomunikasiData",
+    "label": "Komunikasi Data"
+  },
+  {
+    "value": "SistemKontrol",
+    "label": "Sistem Kontrol"
+  },
+  {
+    "value": "InstrumentasiIndustri",
+    "label": "Instrumentasi Industri"
+  },
+  {
+    "value": "PengolahanSinyal",
+    "label": "Pengolahan Sinyal"
+  },
+  {
+    "value": "ElektronikaDaya",
+    "label": "Elektronika Daya"
   }
 ]

@@ -25,14 +25,8 @@ async function getPostFromParams(params: PostPageProps['params']) {
   return post;
 }
 
-// export async function generateStaticParams(): Promise<PostPageProps['params'][]> {
-//   return posts.map((post) => ({ slug: post.slugAsParams.split('/') }));
-// }
-export async function generateStaticParams() {
-  return posts.map((post) => ({
-    subject: post.matkul, // pastikan field ini sesuai dengan struktur data Anda
-    slug: post.slugAsParams.split('/'),
-  }));
+export async function generateStaticParams(): Promise<PostPageProps['params'][]> {
+  return posts.map((post) => ({ slug: post.slugAsParams.split('/') }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
