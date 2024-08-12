@@ -34,7 +34,6 @@ export default async function PostPage({ params }: PostPageProps) {
   if (!post || !post.published) {
     return (
       <>
-        <Header />
         <div className="w-full h-20 bg-light dark:bg-dark"></div>
         <NotFound />
       </>
