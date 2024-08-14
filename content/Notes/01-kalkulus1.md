@@ -174,6 +174,4 @@ $$
 & -x \geq 7 \\
 \end{cases} \\
 Answer : x \leq -7 \text{ atau } x \geq 42
-
-
 $$
