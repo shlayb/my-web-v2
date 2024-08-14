@@ -13,7 +13,7 @@ export default function HeroNotes() {
   return (
     <section className="w-[96%] h-full mx-auto my-0 font-Poppins">
       <div className="w-full max-h-20 flex justify-between items-stretch px-5 border-0">
-        <h1 className="text-5xl font-semibold text-dark dark:text-light max-lg:text-3xl">Lecture Notes</h1>
+        <h1 className="text-4xl font-semibold text-dark dark:text-light max-lg:text-3xl">Lecture Notes</h1>
         <DropDown matkul={value} />
       </div>
       <div className="px-5">

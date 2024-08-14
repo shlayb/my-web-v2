@@ -6,8 +6,12 @@ matkul: Kalkulus
 published: true
 ---
 
-# test bisa ga
+# Bilangan
+
+Here is an inline formula: $E = mc^2$
+
+Here is a block formula:
 
 $$
-coba latex
+\frac{1}{n} \sum_{i=1}^{n} x_i
 $$

@@ -6,6 +6,8 @@ matkul: Fisika
 published: true
 ---
 
+import 'katex/dist/katex.min.css';
+
 # Besaran dan Satuan, Vektor
 
 ## 1. Besaran
@@ -43,7 +45,7 @@ satuan.
 Contoh :
 
 $$
-4 \text{ menit} = 4 \text{ menit} \times \frac{60 \text{ "detik"}}{1 \text{ menit}} = 240 \text{ detik}
+4 \text{ menit} = 4 \text{ menit} \times \frac{60 \text{ detik}}{1 \text{ menit}} = 240 \text{ detik}
 $$
 
 ## 3. Angka Signifikan
