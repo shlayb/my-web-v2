@@ -1,19 +1,20 @@
 import { build } from 'velite';
-
 import withMDX from '@next/mdx';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  // Configure `pageExtensions` to include MDX and Markdown files
+  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // Optionally, add any other Next.js config below
-  // othor next config here...
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
   },
 };
 
+// Velite Webpack Plugin
 class VeliteWebpackPlugin {
   static started = false;
   apply(/** @type {import('webpack').Compiler} */ compiler) {
@@ -27,4 +28,14 @@ class VeliteWebpackPlugin {
     });
   }
 }
-export default nextConfig;
+
+// Apply MDX configuration to the Next.js config
+const finalConfig = withMDX({
+  extension: /\.(md|mdx)$/, // Use both `.md` and `.mdx` extensions
+  options: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  },
+})(nextConfig);
+
+export default finalConfig;

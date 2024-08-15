@@ -2,7 +2,6 @@
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import { use, useEffect, useRef, useState } from 'react';
-import { useTheme } from 'next-themes';
 import ModeToggle from '@/components/ui/mode-toggle';
 
 const poppins = Poppins({
