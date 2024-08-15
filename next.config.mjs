@@ -2,6 +2,7 @@ import { build } from 'velite';
 import withMDX from '@next/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import next from 'next';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -38,4 +39,4 @@ const finalConfig = withMDX({
   },
 })(nextConfig);
 
-export default finalConfig;
+export default nextConfig;
