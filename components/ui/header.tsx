@@ -7,7 +7,7 @@ import ModeToggle from '@/components/ui/mode-toggle';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['200', '400', '500', '600', '700'],
   variable: '--font-poppins',
 });
 
@@ -40,16 +40,16 @@ function Header() {
                 <div className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
                   <ModeToggle />
                 </div>
-                <a href="/#Home" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light  hover:text-gray-900">
+                <a href="/#Home" className="px-2 py-4 text-lg font-medium transition duration-300 dark:text-light  hover:text-gray-900">
                   Home
                 </a>
-                <a href="/#stack" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+                <a href="/#stack" className="px-2 py-4 text-lg font-medium transition duration-300 dark:text-light hover:text-gray-900">
                   Tech
                 </a>
-                <a href="/#contact" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900">
+                <a href="/#contact" className="px-2 py-4 text-lg font-medium transition duration-300 dark:text-light hover:text-gray-900">
                   Contact
                 </a>
-                <Link href="/Notes" className="px-2 py-4 text-lg font-semibold transition duration-300 dark:text-light hover:text-gray-900 ">
+                <Link href="/Notes" className="px-2 py-4 text-lg font-medium transition duration-300 dark:text-light hover:text-gray-900 ">
                   Notes
                 </Link>
               </div>
@@ -63,7 +63,7 @@ function Header() {
                     setMobileNav(!Mobilenav);
                   }}
                 >
-                  <svg className="h-7 w-7 text-gray-80" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-7 w-7 text-gray-80" x-show="!showMenu" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M4 6h16M4 12h16M4 18h16"></path>
                   </svg>
                 </button>
